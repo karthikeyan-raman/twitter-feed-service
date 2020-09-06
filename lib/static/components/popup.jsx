@@ -24,7 +24,6 @@ class PopUpContent extends React.Component {
 
   saveUserOption(e) {
     const { tweetId } = this.props;
-    console.log("========I am called=====", tweetId);
     return axios
       .post("/api/twitter-feed-service/v0/user-option", {
         tweetId,

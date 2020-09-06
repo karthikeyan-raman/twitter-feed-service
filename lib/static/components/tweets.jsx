@@ -33,7 +33,7 @@ class Tweet extends React.Component {
 
   render() {
     return (
-      <div id={"tweet-" + this.props.id} className={"tweet-container"}>
+      <div id={"tweet-" + this.props.id} className={"tweet-container"} key={this.props.id}>
         <ClipLoader size={150} color={"#123abc"} loading={this.state.loading} />
         <TweetWidget
           tweetId={this.props.id}

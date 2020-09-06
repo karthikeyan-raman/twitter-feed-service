@@ -6,12 +6,14 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node --inspect=0.0.0.0:9229 lib/index.js && webpack",
-    "lint": "node ./node_modules/.bin/eslint --format 'node_modules/eslint-friendly-formatter' ./lib ./spec",
-    "ut": "LOG_LEVEL=fatal node ./node_modules/.bin/mocha --exit --opts ./spec/unit/mocha.opts spec/unit",
-    "test": "npm run lint && npm run coverage",
     "build": "webpack --mode production",
-    "build-dev": "webpack --mode development"
+    "build-dev": "webpack --mode development",
+    "coverage": "rm -rf spec/reports/coverage/ && node ./node_modules/.bin/nyc mocha --exit --opts ./spec/unit/mocha.opts spec/",
+    "debug": "NODE_TLS_REJECT_UNAUTHORIZED='0' node --inspect=0.0.0.0:9229 lib/index.js && webpack",
+    "lint": "node ./node_modules/.bin/eslint --format 'node_modules/eslint-friendly-formatter' ./lib ./spec",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node lib/index.js && webpack",
+    "test": "npm run lint && npm run coverage",
+    "ut": "LOG_LEVEL=fatal node ./node_modules/.bin/mocha --exit --opts ./spec/unit/mocha.opts spec/unit"
   },
   "dependencies": {
     "axios": "0.x",
@@ -36,17 +38,18 @@
     "babel-loader": "7.x",
     "babel-preset-env": "1.x",
     "babel-preset-react": "6.x",
-    "css-loader": "^4.2.2",
+    "css-loader": "4.x",
     "eslint": "7.x",
     "eslint-config-airbnb-base": "14.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-react": "7.x",
+    "eslint-friendly-formatter": "4.x",
     "mocha": "6.x",
     "nyc": "14.x",
     "rewire": "4.x",
     "sinon": "7.x",
     "sinon-chai": "3.x",
-    "style-loader": "^1.2.1",
+    "style-loader": "1.x",
     "webpack": "4.x",
     "webpack-cli": "3.x"
   }
