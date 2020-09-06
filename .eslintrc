@@ -1,0 +1,36 @@
+{
+  "extends": ["airbnb-base", "plugin:react/recommended"],
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "strict": ["error", "global"],
+    "no-return-assign": ["error", "except-parens"],
+    "prefer-rest-params": 0,
+    "no-confusing-arrow": 0,
+    "no-underscore-dangle": 0,
+    "consistent-return": 0,
+    "arrow-body-style": 0,
+    "one-var": 0,
+    "new-cap": 0,
+    "newline-per-chained-call": 0,
+    "no-restricted-syntax": 0,
+    "max-len": ["error", {
+      "code": 120,
+      "tabWidth": 2,
+      "ignoreTrailingComments": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreStrings": true
+    }]
+  }
+}

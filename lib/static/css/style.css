@@ -1,0 +1,116 @@
+#app {
+	width: 400px;
+	margin: 30px auto;
+}
+
+#app .content .inputs {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+#app .content .inputs input {
+	flex-grow: 1;
+	padding: 5px;
+}
+
+#app .content .inputs button {
+	padding: 5px;
+	margin-left: 5px;
+}
+
+.tweet-container {
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	padding-bottom: 5px;
+	border-top-width: 0px;
+	border-style: solid;
+	border-color: rgb(204, 214, 221);
+	text-align: center;
+	align-items: center;
+}
+
+.container {
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 45%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: rgb(29, 161, 242);
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.btn-twitter {
+	background: #00ACEE;
+	border-radius: 0;
+	color: #fff;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #0075a2;
+	margin: 1px;
+}
+
+.btn-twitter:link,
+.btn-twitter:visited {
+	color: #fff;
+}
+
+.btn-twitter:active,
+.btn-twitter:hover {
+	background: #0075a2;
+	color: #fff;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal_content {
+	background-color: white;
+	position: absolute;
+}
+
+.popup-content {
+	margin: auto;
+	background: #fff;
+	width: 50%;
+	padding: 5px;
+	border: 1px solid #d7d7d7
+}
+
+[role=tooltip].popup-content {
+	width: 200px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .16);
+	border-radius: 5px
+}
+
+.popup-overlay {
+	background: rgba(0, 0, 0, .5)
+}
+
+[data-popup=tooltip].popup-overlay {
+	background: transparent
+}
+
+.popup-arrow {
+	-webkit-filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, .16));
+	filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, .16));
+	color: #fff;
+	stroke-width: 2px;
+	stroke: #d7d7d7;
+	stroke-dasharray: 30px;
+	stroke-dashoffset: -54px
+}

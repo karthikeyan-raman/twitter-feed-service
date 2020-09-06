@@ -1,0 +1,53 @@
+{
+  "name": "twitter-feed-service",
+  "version": "0.1.0",
+  "description": "Service to fetch user timeline",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node --inspect=0.0.0.0:9229 lib/index.js && webpack",
+    "lint": "node ./node_modules/.bin/eslint --format 'node_modules/eslint-friendly-formatter' ./lib ./spec",
+    "ut": "LOG_LEVEL=fatal node ./node_modules/.bin/mocha --exit --opts ./spec/unit/mocha.opts spec/unit",
+    "test": "npm run lint && npm run coverage",
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development"
+  },
+  "dependencies": {
+    "axios": "0.x",
+    "body-parser": "1.x",
+    "express": "4.x",
+    "express-session": "1.x",
+    "ioredis": "4.x",
+    "login-with-twitter": "1.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-popup": "0.x",
+    "react-social-login-buttons": "3.x",
+    "react-spinners": "0.x",
+    "react-twitter-widgets": "1.x",
+    "reactjs-popup": "2.x",
+    "socket.io": "2.x",
+    "twitter-lite": "0.x",
+    "uuid": "8.x"
+  },
+  "devDependencies": {
+    "babel-core": "6.x",
+    "babel-loader": "7.x",
+    "babel-preset-env": "1.x",
+    "babel-preset-react": "6.x",
+    "css-loader": "^4.2.2",
+    "eslint": "7.x",
+    "eslint-config-airbnb-base": "14.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-react": "7.x",
+    "mocha": "6.x",
+    "nyc": "14.x",
+    "rewire": "4.x",
+    "sinon": "7.x",
+    "sinon-chai": "3.x",
+    "style-loader": "^1.2.1",
+    "webpack": "4.x",
+    "webpack-cli": "3.x"
+  }
+}
